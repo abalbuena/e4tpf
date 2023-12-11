@@ -9,6 +9,7 @@ body {
     font-size: 3em;
     text-shadow: 3px 3px #8495dd;
     color: #ffffff;
+    text-transform: uppercase;
 }
 .list-container {
     background-color: #4b4eb3;
@@ -89,13 +90,23 @@ body {
     text-transform: uppercase;
 }
 .up {
-    background-image: url(img/up_green_arrow.png);
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1em solid #2fd341;
 }
 .down {
-    background-image: url(img/down_red_arrow.png);
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-top: 1em solid #d32f2f;
 }
 .equal {
-    background-image: url(img/equal.png);
+    height: 0.5em;
+    width: 2em;
+    background-color: #ffffff;
 }
 .boton-container {
     text-align: center;
