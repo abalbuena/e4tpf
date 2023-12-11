@@ -5,3 +5,7 @@ var generarImagen = function() {
         document.getElementById("imagen_generada_container").appendChild(canvas)
     });
 }
+
+var generarLista = function() {
+    
+}

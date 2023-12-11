@@ -1,83 +1,181 @@
 <html>
     <head>
+        <meta charset="utf-8"/>
+        <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <style>
-            .puesto { grid-area: test; }
-            .movimiento { grid-area: movimiento; }
-            .album { grid-area: album; }
-            .cancion { grid-area: cancion; }
-            .artista { grid-area: artista; }
-
-            .grid-container {
-                display: grid;
-                grid-template-areas:
-                'test movimiento album cancion cancion cancion'
-                'test movimiento album artista artista artista';
-                /* gap: 10px; */
-                /* background-color: #2196F3; */
-                padding: 10px;
-            }
-
-            .grid-container > div {
-                text-align: center;
-                padding: 20px 0;
-                font-size: 30px;
-            }
-
-            .up {
-                background-image: url(css/img/up_green_arrow.png);
-                height: 100%;
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .puesto {
-                padding: 0;
-                /* margin: 0; */
-                height: 100%;
-                /* vertical-align: middle; */
-                font-size: 5em;
-                text-align: center;
-            }
-            .puesto-text {
-                padding: 0;
-                height: 100%;
-                font-size: 5em;
-                text-align: center;
-            }
-            .album-image {
-                height: 100%;
-            }
-            .nombre-cancion {
-                font-size:3em;
-            }
-            .nombre-artista {
-                font-size: 2em;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
         <div class="title-container">
-            <h1>Top 5 Canciones Rock</h1>
+            <h1 class="title">Top 5 Canciones Rock</h1>
         </div>
         <div class="list-container" id="list_container">
-            <div class="grid-container">
-                <div class="puesto">
-                    <p class="puesto-text">1</p>
+            <div class="list-item">
+                <div class="position-table">
+                    <div style="display: table-row;">
+                        <div class="puesto-container">
+                            <div class="puesto-box">
+                                <label class="puesto-texto">1</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movimiento-container">
+                        <div style="display: table-cell;">
+                            <!-- <img class="movimiento-imagen" src="css/img/up_green_arrow.png"> -->
+                            <div class="movimiento-imagen up"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="movimiento">
-                    <div class="up"></div>
+                <div style="display: table-cell;">
+                    <img class="cancion-imagen" src="https://upload.wikimedia.org/wikipedia/en/3/38/GunsnRosesUseYourIllusionII.jpg">
                 </div>
-                <div class="album">
-                    <img class="album-image" src="https://upload.wikimedia.org/wikipedia/en/3/38/GunsnRosesUseYourIllusionII.jpg">
-                </div>  
-                <div class="cancion">
-                    <p class="nombre-cancion">Don't Cry</p>
+                <div class="cancion-table">
+                    <div style="display: table-row;">
+                        <div class="cancion-artista-celda">
+                            <label class="cancion-artista">Guns N' Roses</label>
+                        </div>
+                    </div>
+                    <div style="display: table-row;">
+                        <div style="display: table-cell;">
+                            <label class="cancion-nombre">Don't Cry</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="artista">
-                    <p class="nombre-artista">Guns N Roses</p>
+            </div>
+            <div class="list-item">
+                <div class="position-table">
+                    <div style="display: table-row;">
+                        <div class="puesto-container">
+                            <div class="puesto-box">
+                                <label class="puesto-texto">2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movimiento-container" style="display: table-row;">
+                        <div style="display: table-cell;">
+                            <!-- <img class="movimiento-imagen" src="css/img/down_red_arrow.png"> -->
+                            <div class="movimiento-imagen down"></div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div style="display: table-cell;">
+                    <img class="cancion-imagen" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/Acdc_Highway_to_Hell.JPG/220px-Acdc_Highway_to_Hell.JPG">
+                </div>
+                <div class="cancion-table">
+                    <div style="display: table-row;">
+                        <div class="cancion-artista-celda">
+                            <label class="cancion-artista">AC/DC</label>
+                        </div>
+                    </div>
+                    <div style="display: table-row;">
+                        <div style="display: table-cell;">
+                            <label class="cancion-nombre">Highway to Hell</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="position-table">
+                    <div style="display: table-row;">
+                        <div class="puesto-container">
+                            <div class="puesto-box">
+                                <label class="puesto-texto">3</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movimiento-container" style="display: table-row;">
+                        <div style="display: table-cell;">
+                            <!-- <img class="movimiento-imagen" src="css/img/up_green_arrow.png"> -->
+                            <div class="movimiento-imagen up"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: table-cell;">
+                    <img class="cancion-imagen" src="https://i.scdn.co/image/ab67616d0000b273c9d55bbe57850e8db251d094">
+                </div>
+                <div class="cancion-table">
+                    <div style="display: table-row;">
+                        <div class="cancion-artista-celda">
+                            <label class="cancion-artista">Rata Blanca</label>
+                        </div>
+                    </div>
+                    <div style="display: table-row;">
+                        <div style="display: table-cell;">
+                            <label class="cancion-nombre">Aún estás en mis sueños</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="position-table">
+                    <div style="display: table-row;">
+                        <div class="puesto-container">
+                            <div class="puesto-box">
+                                <label class="puesto-texto">4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movimiento-container">
+                        <div style="display: table-cell;">
+                            <!-- <img class="movimiento-imagen" src="css/img/down_red_arrow.png"> -->
+                            <div class="movimiento-imagen down"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: table-cell;">
+                    <img class="cancion-imagen" src="https://upload.wikimedia.org/wikipedia/en/2/22/Survivortiger.jpg">
+                </div>
+                <div class="cancion-table">
+                    <div style="display: table-row;">
+                        <div class="cancion-artista-celda">
+                            <label class="cancion-artista">Survivor</label>
+                        </div>
+                    </div>
+                    <div style="display: table-row;">
+                        <div style="display: table-cell;">
+                            <label class="cancion-nombre">Eye of the tiger</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="position-table">
+                    <div style="display: table-row;">
+                        <div class="puesto-container">
+                            <div class="puesto-box">
+                                <label class="puesto-texto">5</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movimiento-container">
+                        <div style="display: table-cell;">
+                            <!-- <img class="movimiento-imagen" src="css/img/equal.png"> -->
+                            <div class="movimiento-imagen equal"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: table-cell;">
+                    <img class="cancion-imagen" src="https://i.scdn.co/image/ab67616d0000b27363cb8c5cc8e51c11259fe449">
+                </div>
+                <div class="cancion-table">
+                    <div style="display: table-row;">
+                        <div class="cancion-artista-celda">
+                            <label class="cancion-artista">Aerosmith</label>
+                        </div>
+                    </div>
+                    <div style="display: table-row;">
+                        <div style="display: table-cell;">
+                            <label class="cancion-nombre">Dream on</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="boton-container">
+            <button class="boton-imagen" onclick="generarImagen()">Imprimir</button>
+        </div>
+        <div id="imagen_generada_container">
+
         </div>
     </body>
 </html>
