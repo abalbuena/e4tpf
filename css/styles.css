@@ -1,6 +1,7 @@
 body {
     background-image: url(img/pxfuel.jpeg);
     background-size: cover;
+    background-repeat: repeat-y;
 }
 .title {
     font-family: sans-serif;
