@@ -1,6 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
+        <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
@@ -165,21 +166,11 @@
                 </div>
             </div>
         </div>
-        <div style="text-align: center;">
+        <div class="boton-container">
             <button class="boton-imagen" onclick="generarImagen()">Imprimir</button>
         </div>
+        <div id="imagen_generada_container">
 
-        <p>Canvas:</p>
-
-        <canvas id="myCanvas" width="240" height="297" style="border:1px solid grey;"></canvas>
-
-        <script>
-        var generarImagen = function() {
-        const canvas = document.getElementById("myCanvas");
-        const ctx = canvas.getContext("2d");
-        const img = document.getElementById("list_container");
-        ctx.drawImage(img, 10, 10);
-        };
-        </script>
+        </div>
     </body>
 </html>

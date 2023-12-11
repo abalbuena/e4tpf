@@ -1,16 +1,7 @@
-// var generarImagen = function() {
-//     const canvas = document.getElementById("canvas");
 
-//     canvas.toBlob((blob) => {
-//     const newImg = document.createElement("img");
-//     const url = URL.createObjectURL(blob);
-
-//     newImg.onload = () => {
-//         // no longer need to read the blob so it's revoked
-//         URL.revokeObjectURL(url);
-//     };
-
-//     newImg.src = url;
-//     document.body.appendChild(newImg);
-//     });
-// }
+var generarImagen = function() {
+    console.log("se va a generar la imagen")
+    html2canvas(document.querySelector("#list_container")).then(canvas => {
+        document.getElementById("imagen_generada_container").appendChild(canvas)
+    });
+}
